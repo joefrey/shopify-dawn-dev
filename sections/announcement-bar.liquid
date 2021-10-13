@@ -7,8 +7,12 @@
             <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
           {%- endif -%}
               <p class="announcement-bar__message h5">
-                <!-- {{ block.settings.text | escape }} -->
-                announcement bar
+                {{ block.settings.text | escape }}
+
+                <!-- {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+                {{ url | img_url | img_tag }}
+ -->
+                <!-- announcement bar -->
                 {%- if block.settings.link != blank -%}
                   {% render 'icon-arrow' %}
                 {%- endif -%}
